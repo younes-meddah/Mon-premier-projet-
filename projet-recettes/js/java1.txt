@@ -1,0 +1,95 @@
+const recipes = [
+  {
+    title: "Foul Modammas",
+    image: "../assets/recettes/1/1.png",
+    description: "Foul moddamas est un plat de la cuisine arabe et méditerranéenne, principalement consommé au petit déjeuner ou au déjeuner."
+  },
+  {
+    title: "Mansaf",
+    image: "../assets/recettes/2/1.png",
+    description: "Le Mansaf est un plat traditionnel de la cuisine jordanienne qui est également populaire dans d'autres pays du Moyen-Orient. "
+  },
+  {
+    title: "Makaroni bel Bechamel",
+    image: "../assets/recettes/3/1.png",
+    description: "Le Makaroni bel Bechamel est un plat de pâtes cuites dans une sauce béchamel crémeuse et savoureuse."
+  },
+  {
+    title: "Kabsa au poulet",
+    image: "../assets/recettes/4/1.png",
+    description: "Le Kabsa au poulet est un plat de riz originaire d'Arabie Saoudite, mais très populaire dans les pays du Golfe Persique et dans certaines régions d'Afrique du Nord."
+  },
+  {
+    title: "Makloubeh",
+    image: "../assets/recettes/5/1.png",
+    description: "Makloubeh est un plat traditionnel du Moyen-Orient, qui signifie littéralement 'retourné' en arabe. C'est un plat à base de riz, d'aubergines, de tomates, de viande (généralement de l'agneau ou du poulet) et d'épices."
+  },
+  {
+    title: "Couscous aux légumes",
+    image: "../assets/recettes/6/1.png",
+    description: "Le couscous aux légumes est un plat d'origine maghrébine. Il est généralement préparé à base de semoule de blé, de légumes frais (carottes, courgettes, navets, pois chiches, etc.)"
+  },
+  {
+    title: "Tajine de poulet aux olives",
+    image: "../assets/recettes/7/1.png",
+    description: "Le tajine de poulet aux olives est un plat traditionnel marocain qui se compose de morceaux de poulet mijotés dans une sauce savoureuse et parfumée aux épices, aux oignons."
+  },
+  {
+    title: "Chorba Frik",
+    image: "../assets/recettes/8/1.png",
+    description: "La chorba frik est une soupe traditionnelle algérienne à base de viande, de légumes et de blé vert concassé appelé 'frik'. Elle est souvent préparée pendant le mois sacré de Ramadan mais peut également être servie tout au long de l'année."
+  },
+  {
+    title: "Koushari",
+    image: "../assets/recettes/9/1.png",
+    description: "Koushari est un plat traditionnel égyptien très populaire qui se compose de riz, de lentilles, de macaronis, d'oignons croustillants, de pois chiches et d'une sauce tomate épicée."
+  },
+  {
+    title: "Köfte",
+    image: "../assets/recettes/10/1.png",
+    description: "Köfte est un plat traditionnel de la cuisine turque, mais également populaire dans plusieurs pays du Moyen-Orient et de l'Asie centrale."
+  },
+  {
+    title: "Mhadjeb",
+    image: "../assets/recettes/11/1.png",
+    description: "Le mhadjeb (ou mhajeb) est une spécialité culinaire algérienne qui se présente sous la forme d'une crêpe farcie et pliée en triangle."
+  }
+];
+console.log('yes');
+const randomRecipes = () => {
+  let randomRecipe1 = Math.floor(Math.random() * recipes.length);
+  let randomRecipe2 = Math.floor(Math.random() * recipes.length);
+  let randomRecipe3 = Math.floor(Math.random() * recipes.length);
+
+  while (randomRecipe1 === randomRecipe2) {
+    randomRecipe2 = Math.floor(Math.random() * recipes.length);
+  }
+
+  while (randomRecipe1 === randomRecipe3 || randomRecipe2 === randomRecipe3) {
+    randomRecipe3 = Math.floor(Math.random() * recipes.length);
+  }
+  document.getElementById("recipe1").href='detail.html?id='+((randomRecipe1+1)%12);
+  document.getElementById("recipe1-title").innerHTML = recipes[randomRecipe1].title;
+  document.getElementById("recipe1-image").src = recipes[randomRecipe1].image;
+  document.getElementById("recipe1-description").innerHTML = recipes[randomRecipe1].description;
+  document.getElementById("recipe2").href='detail.html?id='+((randomRecipe2+1)%12);
+  document.getElementById("recipe2-title").innerHTML = recipes[randomRecipe2].title;
+  document.getElementById("recipe2-image").src = recipes[randomRecipe2].image;
+  document.getElementById("recipe2-description").innerHTML = recipes[randomRecipe2].description;
+  document.getElementById("recipe3").href='detail.html?id='+((randomRecipe3+1)%12);
+  document.getElementById("recipe3-title").innerHTML = recipes[randomRecipe3].title;
+  document.getElementById("recipe3-image").src = recipes[randomRecipe3].image;
+  document.getElementById("recipe3-description").innerHTML = recipes[randomRecipe3].description;
+}
+
+randomRecipes();
+form = document.querySelector('form');
+form.addEventListener('submit', function(event) {
+	
+	event.preventDefault(); // Empêche la soumission du formulaireconsole.log('nn');
+	elm=document.getElementById('inputinput');
+	nouvelleUrl="catalogue.html?nom="+elm.value;
+	window.location.href="catalogue.html?nom="+elm.value;
+	history.pushState(null, null, nouvelleUrl);
+	
+});

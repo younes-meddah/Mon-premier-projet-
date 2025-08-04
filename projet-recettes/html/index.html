@@ -1,0 +1,120 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Barre de navigation de site de recettes</title>
+  <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+  <nav>
+  <div class="logo">
+  </div>
+  <div class="menu">
+    <ul>
+		<li><a href="index.html" id="category-icon">Acceuil</a>
+		<li><a  id="category-icon">Catégories de recettes</a>
+      <ul id="category-list">
+        <li><a href="catalogue.html?categorie=Entrée">Entrées</a></li><br>
+        <li><a href="catalogue.html?categorie=Plat principal">Plats principaux</a></li><br>
+        <li><a href="catalogue.html?categorie=Déjeuner">Déjeuner</a></li>
+		<li><a href="catalogue.html?categorie=Snacking">Snacking</a></li>
+      </ul></li>
+      <li><a href="catalogue.html">Catalogue</a></li>
+      <li><a href="#apropos">À propos</a></li>
+    </ul>
+  </div>
+  <div class="search">
+    <form>
+      <input type="text" id='inputinput' placeholder="Rechercher...">
+      <input type="submit" value="Rechercher">
+    </form>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Bienvenue dans notre site de recettes</h1>
+    <p>Découvrez des recettes délicieuses pour toutes les occasions</p>
+    <a href="catalogue.html" class="btn">Catalogue des recettes</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://source.unsplash.com/500x500/?food" alt="Image de plat">
+  </div>
+</section>
+
+<section class="categories">
+  <div class="container">
+    <h2>Nos catégories</h2>
+    <div class="category">
+	<a href="catalogue.html?categorie=Plat principal">
+      <img src="../assets/recettes/categorie/dinner.jpg" alt="Catégorie 1">
+	</a>
+      <h3>Plat Principale</h3>
+      <p>Un plat principal est le plat principal ou le plat principal d'un repas. C'est généralement le plat le plus important et le plus substantiel d'un repas et il est souvent servi après les entrées.</p>
+    </div>
+    <div class="category">
+	<a href="catalogue.html?categorie=Entrée">
+      <img src="../assets/recettes/categorie/pprincipale.jpg" alt="Catégorie 2">
+	</a>
+      <h3>Entrees</h3>
+      <p>Les entrées, également appelées hors-d'œuvre ou amuse-gueules, sont des plats légers et souvent appétissants servis avant le plat principal.</p>
+    </div>
+    <div class="category">
+	<a href="catalogue.html?categorie=Dinner">
+      <img src="../assets/recettes/categorie/entrees.jpg" alt="Catégorie 3">
+	</a>
+      <h3>Dinner</h3>
+      <p>"Dinner" est un terme qui fait référence à un repas principal consommé le soir. C'est généralement le repas le plus important de la journée pour de nombreuses cultures et régions du monde.</p>
+    </div>
+  </div>
+</section>
+<section class="random-recipes">
+  <div class="container">
+    <h2>Recettes aléatoires</h2>
+	
+    <div class="recipes-grid">
+	  
+      <div class="recipe-card">
+	  <a id='recipe1' >
+        <img src="1.png" alt="Recette 1" id="recipe1-image">
+        <h3 id="recipe1-title">Titre de la recette 1</h3>
+        <p id="recipe1-description">Description de la recette 1</p>
+		</a>
+      </div>
+	  
+      <div class="recipe-card">
+		<a id='recipe2'>
+        <img id="recipe2-image" src="2.png" alt="Recette 2">
+        <h3 id="recipe2-title">Titre de la recette 2</h3>
+        <p id="recipe2-description">Description de la recette 2</p>
+		</a>
+      </div>
+      <div class="recipe-card">
+		<a id='recipe3'>
+        <img id="recipe3-image" src="3.png" alt="Recette 3">
+        <h3 id="recipe3-title">Titre de la recette 3</h3>
+        <p id="recipe3-description">Description de la recette 3</p>
+		</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about" id="apropos">
+  <div class="container">
+    <h2>À propos</h2>
+    <p>Nous sommes une équipe passionnée de cuisine et nous avons créé cette application pour aider les gens à trouver et à partager des recettes délicieuses.</p>
+    <p>Nous espérons que notre application vous aidera à découvrir de nouveaux plats et à inspirer votre créativité culinaire.</p>
+    <h3>Notre équipe</h3>
+    <ul>
+      <li><span>Nom:</span> John Doe</li>
+      <li><span>Poste:</span> Chef cuisinier</li>
+      <li><span>Description:</span> John a plus de 20 ans d'expérience en cuisine et a travaillé dans plusieurs restaurants étoilés. Il est passionné par la création de plats innovants et délicieux.</li>
+      <li><span>Nom:</span> Jane Smith</li>
+      <li><span>Poste:</span> Photographe culinaire</li>
+      <li><span>Description:</span> Jane est une photographe culinaire primée qui travaille avec des chefs de renom pour capturer l'esthétique de leurs créations culinaires. Elle est passionnée par la photographie et l'art de la nourriture.</li>
+    </ul>
+  </div>
+</section>
+<script src="../js/java1.txt"></script>
+</body>
+</html>

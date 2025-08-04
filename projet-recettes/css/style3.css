@@ -1,0 +1,338 @@
+/* Style de base pour la barre de navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+}
+
+nav .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav .menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+nav .menu li a:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f44336;
+  transition: width 0.3s ease-in-out;
+}
+
+nav .menu li a:hover:before {
+  width: 100%;
+}
+
+nav .menu li a:hover {
+  color: #f44336;
+}
+
+/* Style pour la barre de recherche */
+nav .search form {
+  display: flex;
+  align-items: center;
+}
+
+nav .search input[type="text"] {
+  height: 50px;
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ddd;
+  transition: width 0.5s ease-in-out;
+}
+
+nav .search input[type="submit"] {
+  height: 50px;
+  width: 50px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  margin-left: -50px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Media queries pour les tablettes */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav .menu {
+    width: 100%;
+    order: 3;
+  }
+
+  nav .search {
+    width: 100%;
+    order: 2;
+    margin-top: 20px;
+  }
+
+  nav .search input[type="text"] {
+    width: 100%;
+  }
+
+  nav .search input[type="submit"] {
+    margin-left: 0;
+  }
+}
+/* Style de la page entière */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Style de l'en-tête */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style du titre de l'en-tête */
+h1 {
+  margin: 0;
+}
+/* styles généraux pour le corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* styles pour le contenu principal */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* styles pour les liens */
+a {
+  color: #F9C74F;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* styles pour les boutons */
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #F9C74F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FFA600;
+}
+
+/* styles pour les messages d'erreur */
+.error {
+  color: #F94144;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* styles pour les messages de succès */
+.success {
+  color: #4CAF50;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+/* styles pour le header */
+header {
+  background-color: #F9C74F;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+/* styles pour les sections */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+section ul,
+section ol {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+section ul li,
+section ol li {
+  margin-bottom: 10px;
+}
+
+/* styles pour le formulaire de commentaires */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #F9C74F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* styles pour la liste de commentaires */
+.commentaire {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.commentaire h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.commentaire p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* styles pour les écrans de tablette */
+@media (max-width: 768px) {
+  /* réduire la taille du texte */
+  body {
+    font-size: 14px;
+  }
+
+  /* réduire la largeur du contenu principal */
+  main {
+    max-width: 600px;
+  }
+
+  /* réduire la taille des images */
+  img {
+    max-width: 100%;
+  }
+
+  /* placer le formulaire de commentaires en haut de la page */
+  form {
+    order: -1;
+  }
+}
+
+/* styles pour les écrans de téléphone */
+@media (max-width: 480px) {
+  /* réduire encore la taille du texte */
+  body {
+    font-size: 12px;
+  }
+
+  /* réduire encore la largeur du contenu principal */
+  main {
+    max-width: 400px;
+  }
+
+  /* placer le formulaire de commentaires en haut de la page */
+  form {
+    order: -1;
+  }
+
+  /* ajuster la taille des images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* réduire l'espace entre les commentaires */
+  .commentaire {
+    margin-bottom: 10px;
+  }
+
+  /* réduire la taille des titres de commentaires */
+  .commentaire h3 {
+    font-size: 16px;
+  }
+
+  /* réduire la taille du texte des commentaires */
+  .commentaire p {
+    font-size: 14px;
+  }
+}
+img{
+	height:400px;
+	width:600px;
+	align:center;
+}

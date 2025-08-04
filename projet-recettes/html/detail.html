@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Recette de lasagnes</title>
+  <link rel="stylesheet" href="../css/style3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <nav>
+  <div class="logo">
+  </div>
+  <div class="menu">
+    <ul>
+		<li><a href="index.html" id="category-icon">Acceuil</a>
+		<li><a  id="category-icon">Catégories de recettes</a>
+      <ul id="category-list">
+        <li><a href="catalogue.html?categorie=Entrée">Entrées</a></li><br>
+        <li><a href="catalogue.html?categorie=Plat principal">Plats principaux</a></li><br>
+        <li><a href="catalogue.html?categorie=Déjeuner">Déjeuner</a></li>
+		<li><a href="catalogue.html?categorie=Snacking">Snacking</a></li>
+      </ul></li>
+      <li><a href="catalogue.html">Catalogue</a></li>
+      <li><a href="#apropos">À propos</a></li>
+    </ul>
+  </div>
+  <div class="search">
+    <form>
+      
+    </form>
+  </div>
+</nav>
+<header>
+</header>
+  <main>
+    <section id="recette">
+      
+    </section>
+    <section id="commentaires">
+      <h2>Commentaires</h2>
+      <form>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        <label for="commentaire">Commentaire :</label>
+        <textarea id="commentaire" name="commentaire" required></textarea>
+		<label for="rating">Rating :</label>
+        <input id="rating" name="rating" required></textarea>
+        <button type="button" onclick="addComment()">Envoyer</button>
+      </form>
+      <div id='listecommentaires'>
+        <div class='commentaire'>
+        </div>
+        <div class='commentaire'>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="about" id="apropos">
+  <div class="container">
+    <h2>À propos</h2>
+    <p>Nous sommes une équipe passionnée de cuisine et nous avons créé cette application pour aider les gens à trouver et à partager des recettes délicieuses.</p>
+    <p>Nous espérons que notre application vous aidera à découvrir de nouveaux plats et à inspirer votre créativité culinaire.</p>
+    <h3>Notre équipe</h3>
+    <ul>
+      <li><span>Nom:</span> John Doe</li>
+      <li><span>Poste:</span> Chef cuisinier</li>
+      <li><span>Description:</span> John a plus de 20 ans d'expérience en cuisine et a travaillé dans plusieurs restaurants étoilés. Il est passionné par la création de plats innovants et délicieux.</li>
+      <li><span>Nom:</span> Jane Smith</li>
+      <li><span>Poste:</span> Photographe culinaire</li>
+      <li><span>Description:</span> Jane est une photographe culinaire primée qui travaille avec des chefs de renom pour capturer l'esthétique de leurs créations culinaires. Elle est passionnée par la photographie et l'art de la nourriture.</li>
+    </ul>
+  </div>
+</section>
+  <script src='../js/java3.txt'></script>
+</body>
+</html>

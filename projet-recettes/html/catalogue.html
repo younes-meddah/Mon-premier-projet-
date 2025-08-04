@@ -1,0 +1,96 @@
+<!Doctype html>
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue de site de recettes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style2.css">
+    
+</head>
+<body>
+  <nav>
+  <div class="logo">
+    
+  </div>
+  <div class="menu">
+    <ul>
+	  <li><a href="index.html" id="category-icon">Acceuil</a>
+	  <li><a href="#" id="category-icon">Catégories de recettes</a>
+      <ul id="category-list">
+        <li><a href="catalogue.html?categorie=Entrée">Entrées</a></li><br><br>
+        <li><a href="catalogue.html?categorie=Plat principal">Plats principaux</a></li>
+        <li><a href="catalogue.html?categorie=Déjeuner">Déjeuner</a></li>
+		<li><a href="catalogue.html?categorie=Snacking">Snacking</a></li>
+      </ul></li>
+      <li><a href="catalogue.html">Catalogue</a></li>
+      <li><a href="#apropos">À propos</a></li>
+    </ul>
+  </div>
+  <div class="search">
+    <form>
+      <input type="text" id="search-input" placeholder="Rechercher...">
+      <input id="add-param-btn" type="submit" value="Rechercher">
+    </form>
+  </div>
+</nav>
+<select >
+        <option value="1">Nom</option>
+        <option value="2">Categorie</option>
+        <option value="3">Pays d'origine</option>
+        <option value="4">Temps de préparation</option>
+		<option value="5">Rating</option>
+      </select>
+	  <button type='button' onclick='TrierRecettes()'>Trier</button>
+	  <form id="formulaire-recherche">
+  <div>
+  <br>
+    <label for="input-nom">Nom :</label>
+    <input type="text" id="input-nom" class="champ-recherche" placeholder="Entrez un nom">
+  </div>
+  <br>
+  <div>
+    <label for="input-prenom">Categorie :</label>
+    <input type="text" id="input-Categorie" class="champ-recherche" placeholder="Entrez une categorie">
+  </div>
+  <br>
+  <div>
+    <label for="input-prenom">Pays :</label>
+    <input type="text" id="input-Pays" class="champ-recherche" placeholder="Entrez un pays">
+  </div>
+  <br>
+  <div>
+    <label for="input-prenom">Duree :</label>
+    <input type="text" id="input-Duree" class="champ-recherche" placeholder="Entrez une duree">
+  </div>
+  <br>
+  <div>
+    <label for="input-prenom">Rating :</label>
+    <input type="text" id="input-Rating" class="champ-recherche" placeholder="Entrez un rating">
+  </div>
+  <button type='button' onclick='RechercherPar()'>Rechercher</button>
+  <button type='reset'>Supprimer</button>
+</form>
+	<header>
+      <h1>Catalogue de recettes professionnelles</h1>
+	  <div id="recipelist"></div>
+    </header>
+    
+<section class="about" id="apropos">
+  <div class="container">
+    <h2>À propos</h2>
+    <p>Nous sommes une équipe passionnée de cuisine et nous avons créé cette application pour aider les gens à trouver et à partager des recettes délicieuses.</p>
+    <p>Nous espérons que notre application vous aidera à découvrir de nouveaux plats et à inspirer votre créativité culinaire.</p>
+    <h3>Notre équipe</h3>
+    <ul>
+      <li><span>Nom:</span> John Doe</li>
+      <li><span>Poste:</span> Chef cuisinier</li>
+      <li><span>Description:</span> John a plus de 20 ans d'expérience en cuisine et a travaillé dans plusieurs restaurants étoilés. Il est passionné par la création de plats innovants et délicieux.</li>
+      <li><span>Nom:</span> Jane Smith</li>
+      <li><span>Poste:</span> Photographe culinaire</li>
+      <li><span>Description:</span> Jane est une photographe culinaire primée qui travaille avec des chefs de renom pour capturer l'esthétique de leurs créations culinaires. Elle est passionnée par la photographie et l'art de la nourriture.</li>
+    </ul>
+  </div>
+</section>
+	<script src="../js/java2.txt"></script>
+</body>
+  
+</html>
